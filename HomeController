@@ -1,4 +1,4 @@
-package com.naver.kus;
+﻿package com.naver.kus;
 
 import java.util.Locale;
 
@@ -110,5 +110,9 @@ public class HomeController {
 		mav.addObject("msg", msg);
 		return mav;
 	}
-	
+	@RequestMapping(value = "/doctorList", method = RequestMethod.GET)
+	public String doctorList(Locale locale, Model model) {
+		
+		return "doctor/doctor_list";
+	}
 }
