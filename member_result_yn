@@ -57,7 +57,7 @@ qwjehqwkjhkasjh
 			</div>
 			<div class="row">
 				<button type="button" class="col-md-offset-4 col-md-4 btn btn-success resultButton"
-				name="cancel" id="cancel" onclick="location.href='member_list'">취소</button>
+				name="cancel" id="cancel" onclick="location.href='member_list'">취소!!</button>
 			</div>
 			
 		</div>
