@@ -41,4 +41,5 @@ public class LoginController {
 		session.invalidate();
 		return "redirect:/home";
 	}
+	123123
 }
