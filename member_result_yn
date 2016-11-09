@@ -48,7 +48,12 @@ qwjehqwkjhkasjh
 			<div class="row">
 				<div class="col-md-offset-4 col-md-4 resultMessage">
 				<input type="hidden" name="id" value="${id}"/>
+<<<<<<< HEAD
 					삭제 하시겠습니까?!
+=======
+					삭제 하시겠습니까?
+					오오오오오
+>>>>>>> refs/remotes/origin/master
 				</div>
 			</div>
 			<div class="row">
