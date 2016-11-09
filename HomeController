@@ -31,7 +31,7 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@Autowired
-	private SqlSession sqlSession;
+	private SqlSession sqlSession12;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -105,7 +105,7 @@ public class HomeController {
 			msg = "Success! Deleted your Info";
 			session.invalidate();
 		}
-qweqwe
+qweqwe ---!!!
 		else
 			msg = "Failed! your Information";
 		mav.addObject("msg", msg);
