@@ -38,7 +38,6 @@
 	}
 </style>
 </content>
-qwjehqwkjhkasjh
 <body>
 	<form action="memberDelete" method="post">
 		<div class="container">
@@ -48,12 +47,8 @@ qwjehqwkjhkasjh
 			<div class="row">
 				<div class="col-md-offset-4 col-md-4 resultMessage">
 				<input type="hidden" name="id" value="${id}"/>
-<<<<<<< HEAD
-					삭제 하시겠습니까?!
-=======
 					삭제 하시겠습니까?
 					오오오오오
->>>>>>> refs/remotes/origin/master
 				</div>
 			</div>
 			<div class="row">
@@ -62,7 +57,7 @@ qwjehqwkjhkasjh
 			</div>
 			<div class="row">
 				<button type="button" class="col-md-offset-4 col-md-4 btn btn-success resultButton"
-				name="cancel" id="cancel" onclick="location.href='member_list'">취소!!</button>
+				name="cancel" id="cancel" onclick="location.href='member_list'">취소</button>
 			</div>
 			
 		</div>
