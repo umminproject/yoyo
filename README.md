@@ -29,21 +29,7 @@ public class LoginController {
 	public String loginFail(Locale locale, Model model) {
 		return "login/login_fail";
 	}
-	@RequestMapping(value = "/loginMember", method = RequestMethod.POST)
-	public String loginMember(@ModelAttribute("member") Member member,HttpSession session) {
-		MemberDao dao = sqlSession.getMapper(MemberDao.class);
-		Member data = dao.selectLogin(member);
-		if(data == null){
-			return "redirect:/loginFail";
-		}
-		else{
-			session.setAttribute("sessionid",data.getId());
-			session.setAttribute("sessionpass",data.getPassword());
-			session.setAttribute("sessionname",data.getName());
-			session.setAttribute("sessionlevel",data.getMemberlevel());
-			return "redirect:/home";
-		}
-	}
+	
 	@RequestMapping(value = "/logoutForm", method = RequestMethod.GET)
 	public String logoutForm(HttpServletRequest request) {
 		HttpSession session = request.getSession();
