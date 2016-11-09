@@ -105,6 +105,7 @@ public class HomeController {
 			msg = "Success! Deleted your Info";
 			session.invalidate();
 		}
+qweqwe
 		else
 			msg = "Failed! your Information";
 		mav.addObject("msg", msg);
