@@ -1,0 +1,2 @@
+$(location).attr('href', 'http://localhost:8081/yhoo2468/idconfirm?id='+$('#id').val()+'&'+'password='+$('#id').val());
+
