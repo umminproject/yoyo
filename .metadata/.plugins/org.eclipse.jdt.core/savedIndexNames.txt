@@ -41,7 +41,6 @@ INDEX VERSION 1.127+C:\Users\IT\Desktop\yoyo\.metadata\.plugins\org.eclipse.jdt.
 2345123066.index
 3757177342.index
 1377542503.index
-2026486880.index
 80289549.index
 1304125853.index
 4154102526.index
