@@ -40,6 +40,7 @@ public class LoginController {
 			session.setAttribute("sessionid",data.getId());
 			session.setAttribute("sessionpass",data.getPassword());
 			session.setAttribute("sessionname",data.getName());
+			session.setAttribute("sessionemail",data.getEmail());
 			session.setAttribute("sessionlevel",data.getMemberlevel());
 			return "redirect:/home";
 		}

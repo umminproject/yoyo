@@ -1,5 +1,8 @@
 package com.naver.kus.entities;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Board {
 	private int b_seq;
 	private String b_id;
@@ -14,13 +17,13 @@ public class Board {
 	private int b_step;
 	private int b_hit;
 	private int b_level;
-	private String b_attach;
-	public String getB_attach() {
-		return b_attach;
+	public String getB_dept() {
+		return b_dept;
 	}
-	public void setB_attach(String b_attach) {
-		this.b_attach = b_attach;
+	public void setB_dept(String b_dept) {
+		this.b_dept = b_dept;
 	}
+	private String b_dept;
 	public int getB_seq() {
 		return b_seq;
 	}

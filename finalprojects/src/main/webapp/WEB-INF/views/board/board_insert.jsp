@@ -21,26 +21,22 @@
 	</head>
 	
 	
-	<body class="page" onload="">
+	<body>
 		<!-- MAIN -->
 			<div class="wrapper cf">
 				<p><h3>작성해주세요!</h3></p>
 				<p>부담없이 속시원하게 얘기해 주세요.</p>
 				<!-- form -->
-				<script type="text/javascript" src="js/form-validation.js"></script>
-				<form id="contactForm" action="#" method="post" data-parsley-validate="true">
-														
+				<form class="form" id="contactForm" action="boardInsert" method="post" data-parsley-validate="true" role="form">
 						 <p>
 						 <div class="input-group" >
 							<label for="subject">주제</label>
-							<select class="selectpicker form-control" name="b_no" required="" data-parsley-error-message="주제를 선택해주세요"
-							 data-parsley-errors-container="div[id='validateSelect']">
-							<option value="1">우울해요</option>
-							<option value="2">걱정이많아요</option>
-							<option value="3">불안해요</option>
+							<select class="form-control" name="b_dept" id="b_dept" >
+							<option>우정</option>
+							<option>사랑</option>
+							<option>소망</option>
 							</select>
-							</div>
-							 <div id="validateSelect" style="color:#ff0000"></div>
+						</div>
 						</p>
 						 
 						<p>
@@ -64,15 +60,12 @@
 						</p>
 						
 						
-						<div class="row" aling="center" >
-<!-- 						<div class="col-md-5"></div> -->
-						<button class="btn btn-info"  type="submit" value="Send" name="submit" id="submit" >확인</button> 
+						<div class="row" align="center" >
+						<button class="btn btn-info"  type="submit" name="save" id="save" >확인</button> 
 						<button class="btn btn-warning"  type="button" value="Cancel" name="cancel" id="cancel" >취소</button> 
 						</div>
 						</div>
-					
 				</form>
-				<p id="sent-form-msg" class="success">Form data sent. Thanks for your comments.</p>
 				<!-- ENDS form -->				
 				
     		</div>

@@ -18,11 +18,12 @@
 		<id property="b_hit" column="b_hit"/>
 		<id property="b_level" column="b_level"/>
 		<id property="b_attach" column="b_attach"/>
+		<id property="b_dept" column="b_dept"/>
 		</resultMap>
 		<select id="boardSelectAll" resultMap="boardMap">
 				select*from
 				(select rownum numrow, A.* from (select * from board 
-				order by b_ref desc, b_step asc)A) where numrow>0 and numrow <![CDATA[<=]]>10
+				order by b_ref desc, b_step asc)A)
 		</select>
 		<select id="SelectPageList" resultMap="boardMap">
 				select*from
@@ -30,11 +31,10 @@
 				order by b_ref desc, b_step asc)A) where numrow <![CDATA[<=]]>#{endrow} and numrow>#{startrow} 
 		</select>
 		<insert id="insertBoard" parameterType="hashMap">
-				insert into board (b_seq,b_id,b_name,b_email,b_title,b_content,b_date,b_ip,b_ref,b_step,b_hit,b_level,b_attach) 
+				insert into board (b_seq,b_id,b_name,b_email,b_title,b_content,b_date,b_ip,b_ref,b_step,b_hit,b_level,b_dept) 
 				values ((select coalesce(max(b_seq)+1,1) from board),
 				#{b_id},#{b_name},#{b_email},#{b_title},#{b_content},#{b_date},#{b_ip}
-				,(select coalesce(max(b_seq)+1,1) from board)
-				,#{b_step},#{b_hit},#{b_level},#{b_attach})
+				,(select coalesce(max(b_seq)+1,1) from board),#{b_step},#{b_hit},#{b_level},#{b_dept})
 		</insert>
 		<select id="selectCount" parameterType="hashMap" resultType="int">
 			select count(*) from board where ${selectbox} like '%'||#{find}||'%'

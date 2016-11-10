@@ -26,8 +26,10 @@
 			}
 		});
 	   $("#example_filter").append("<button id='writeboard' align='right'>글쓰기</button>");
+	   $('#writeboard').click(function(){
 		   var url = "boardInsertForm"
 		   $(location).attr('href',url);
+	   });
 	   $("#example_filter").append("<button id='selectdel' >선택삭제</button>");
 	   $('#selectdel').click(function(){
 		   var checked = $("input[name=unitchk]:checked").length;
@@ -57,7 +59,7 @@
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
-            	<<th>No.</th>
+            	<th>No.</th>
                 <th>제목</th>
                 <th>작성자</th>
                 <th>작성일</th>
@@ -66,38 +68,28 @@
             </tr>
         </thead>
         <tfoot>
-            <tr>
-            	<th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
+	            <tr>
+	            	<th></th>
+	                <th></th>
+	                <th></th>
+	                <th></th>
+	                <th></th>
+	                <th></th>
+	            </tr>
         </tfoot>
          <tbody>
-	            <tr>
-	            	<td>123</td>
-	               	<td> 456</td>
-	                <td>789</td>
-	                <td>qweaszxc</td>
-	                <td>qweaszxc</td>
-	                <td style="text-align:center !important"><input type="checkbox" name="unitchk" id="unitchk" value="${member.id}"/></td>
-	            </tr>
+	           <c:forEach var="board" items="${boards}">
+		            <tr>
+		            	<td>${board.b_seq}</td>
+		                <td><a href="boardDetail?b_seq=${board.b_seq}">${board.b_title}</a></td>
+		                <td>${board.b_name}</td>
+		                <td>${board.b_date}</td>
+		                <td>${board.b_hit}</td>
+		                <td style="text-align:center !important"><input type="checkbox" name="unitchk" 
+		                id="unitchk" value="${board.b_seq}"/></td>
+		            </tr>
+	            </c:forEach>
         </tbody>
-<!--         <tbody> -->
-<%--         	<c:forEach var="member" items="${members}"> --%>
-<!-- 	            <tr> -->
-<%-- 	            	<td>${member.photo}</td> --%>
-<%-- 	               	<td> <a href="memberUpdateForm?id=${member.id}">${member.id}</a></td> --%>
-<%-- 	                <td>${member.name}</td> --%>
-<%-- 	                <td>${member.password}</td> --%>
-<%-- 	                <td>${member.phone1}-${member.phone2}-${member.phone3}</td> --%>
-<%-- 	                <td>${member.addr1}</td> --%>
-<%-- 	                <td style="text-align:center !important"><input type="checkbox" name="unitchk" id="unitchk" value="${member.id}"/></td> --%>
-<!-- 	            </tr> -->
-<%--             </c:forEach> --%>
-<!--         </tbody> -->
     </table>
     </div>
     <br><br><br><br><br><br><br>
