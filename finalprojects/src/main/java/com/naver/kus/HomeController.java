@@ -115,4 +115,9 @@ public class HomeController {
 		
 		return "doctor/doctor_list";
 	}
+	@RequestMapping(value = "/boardInsertForm", method = RequestMethod.GET)
+	public String boardInsertForm(Locale locale, Model model) {
+		
+		return "board/board_insert";
+	}
 }

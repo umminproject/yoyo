@@ -26,6 +26,8 @@
 			}
 		});
 	   $("#example_filter").append("<button id='writeboard' align='right'>글쓰기</button>");
+		   var url = "boardInsertForm"
+		   $(location).attr('href',url);
 	   $("#example_filter").append("<button id='selectdel' >선택삭제</button>");
 	   $('#selectdel').click(function(){
 		   var checked = $("input[name=unitchk]:checked").length;
