@@ -55,7 +55,7 @@
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>
-            	<th>No.</th>
+            	<<th>No.</th>
                 <th>제목</th>
                 <th>작성자</th>
                 <th>작성일</th>
