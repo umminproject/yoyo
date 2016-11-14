@@ -1,0 +1,17 @@
+	@RequestMapping(value = "/memberUpdateForm", method = RequestMethod.GET)
+	public ModelAndView memberUpdate(@RequestParam String id, HttpServletResponse response, HttpServletRequest request) throws Exception{
+		MemberDao dao = sqlSession.getMapper(MemberDao.class);
+		Member member = dao.selectOne(id);
+		ModelAndView mav = new ModelAndView("member/member_update_form");
+		mav.addObject("member", member);
+		
+		return mav;
+	}
+	@RequestMapping(value = "/memberInfo", method = RequestMethod.GET)
+	public ModelAndView memberInfo(@RequestParam String id, HttpServletResponse response, HttpServletRequest request) throws Exception{
+		HttpSession session = request.getSession();
+		String id1 = (String) session.getAttribute("sessionid");
+		ModelAndView mav = new ModelAndView("member/member_info");
+		mav.addObject("id",id1);
+		return mav;
+	}
