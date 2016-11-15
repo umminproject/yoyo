@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.naver.kus.service.DoctorDao">
+		<resultMap type="com.naver.kus.entities.Doctor" id="doctorMap">
+		<id property="d_no" column="d_no"/>
+		<id property="d_date" column="d_date"/>
+		<id property="d_content" column="d_content"/>
+		<id property="d_id" column="d_id"/>
+		<id property="d_email" column="d_email"/>
+		<id property="d_title" column="d_title"/>
+		<id property="d_ref" column="d_ref"/>
+		<id property="u_id" column="u_id"/>
+		</resultMap>
+		<select id="selectCount" resultType="int">
+			select count(u_id) from d_record where d_id = #{d_id}
+		</select>
+</mapper>
